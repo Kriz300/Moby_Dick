@@ -78,6 +78,7 @@ function SendResume() { //express
         }
     }
     list_count_order = [];
+    console.log("resumen cargado en sistema.")
 }
 
 consumer.on('ready', function () {

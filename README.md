@@ -2,11 +2,50 @@
 
 _._
 
-## Consideraciones de Ejecución 🔧
+## Ejecución 🔧
 
-## Construido con 🛠️
+
+
+
+
+## Estructura 🛠️
+
+### Construido con:
 
 **Javascript**
+
+### Creación de topicos:
+
+```
+const stream = Kafka.Producer.createWriteStream({
+    'metadata.broker.list': 'localhost:9092'
+}, {}, {
+    topic: 'orders'
+});
+```
+
+```
+const stream = Kafka.Producer.createWriteStream({
+    'metadata.broker.list': 'localhost:9092'
+}, {}, {
+    topic: 'summary'
+});
+```
+
+### Ordenes y resumen:
+
+```
+fields: [
+        {
+            name: 'carro',
+            type: 'string'
+        },
+        {
+            name: 'qty',
+            type: 'string'
+        }
+    ]
+```
 
 
 ## Autores ✒️
